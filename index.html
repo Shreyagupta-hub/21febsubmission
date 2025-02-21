@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My doc</title>
+   <style>body {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e6e2e2;
+}
+#h3{
+    font-size: 25px;
+    color: rgb(9, 87, 28);
+    font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 500px;
+    margin-left: 800px;
+}
+.box-container {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 50px;
+    margin-left: 700px ; 
+    margin-top: -450px;
+}
+
+.box {
+    width: 350px;
+    height: 120px;
+    background-color: #d6e6e7;
+    transition: transform border 0.3s ease;
+     box-shadow :0.3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.box:hover {
+    border: 2px solid #063d1a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.inside{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: 00;
+}
+.custom-select{
+    height: 20px;
+    width: 80px;
+    font-size: 10px;
+   margin-left: 50px;
+   margin-top: -5px;
+}
+#btn{
+    background-color: rgb(9, 87, 28);
+    color: white;
+    border: none;
+    height: 50px;
+    width: 150px;
+    border-radius: 2px;
+    margin-left: 750px;
+    margin-top: 40px;
+}
+.spn{
+   
+    font-size: 16px;
+    margin-left: 710px;
+    overflow: hidden;
+    margin-top: 18px;
+
+}
+#spn1{
+    color: rgb(9, 87, 28);
+
+}
+#spn2{
+    margin-left: 60px;
+}</style>
+</head>
+<body>
+    <h3 id="h3">Bundle & Save</h3>
+    <div class="box-container">
+        <div class="box" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+            <div class="inside">
+            <input type="radio"><label> 1 pair  <br>DKK 105.00</label>
+            <span>50% off</span>  
+            <div class="inside1">
+                <select class="custom-select">
+                    <option value="" disabled selected>Select Sizes</option>
+                    <option value="option1">S</option>
+                    <option value="option2">M</option>
+                    <option value="option3">L</option>
+                </select> 
+                <select class="custom-select">
+                    <option value="" disabled selected>Select color</option>
+                    <option value="option1">Red</option>
+                    <option value="option2">Blue</option>
+                    <option value="option3">Green</option>
+                </select> 
+            </div>
+           
+            </div>
+        </div>
+        <div class="box" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+            <div class="inside">
+                <input type="radio"><label> 2 pair  <br>DKK 355.00</label>
+                <span>30% off</span>  
+                <select class="custom-select"> Select Sizes
+                    <option value="" disabled selected>Select Sizes</option>
+                    <option value="option1">S</option>
+                    <option value="option2">M</option>
+                    <option value="option3">L</option>
+                </select> 
+                <select class="custom-select">
+                    <option value="" disabled selected>Select color</option>
+                    <option value="option1">Red</option>
+                    <option value="option2">Blue</option>
+                    <option value="option3">Green</option>
+                </select>
+                </div>
+        </div>
+        <div class="box" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+            <div class="inside">
+                <input type="radio"><label> 3 pair  <br>DKK 612.00</label>
+                <span>60% off</span>  
+                <select class="custom-select">
+                    <option value=""disabled selected>Select Sizes</option>
+                    <option value="option1">S</option>
+                    <option value="option2">M</option>
+                    <option value="option3">L</option>
+                </select> 
+                <select class="custom-select">
+                    <option value="" disabled selected>Select color</option>
+                    <option value="option1">Red</option>
+                    <option value="option2">Blue</option>
+                    <option value="option3">Green</option>
+                </select>
+                </div>
+        </div>
+    </div>
+    <div class="spn">
+        <span id="spn1"> Free 2 Day Shopping</span>
+    <span id="spn2">Total: DKK 853.30</span>
+    </div>
+    
+    <button id="btn"> ADD TO CART</button>
+    <script >
+        function zoomIn(element) {
+    element.style.transform = 'scale(1.2)';
+    }
+
+        function zoomOut(element) {
+    element.style.transform = 'scale(1)';
+   
+    }
+    </script>
+</body> 
+</html>
